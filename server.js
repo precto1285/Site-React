@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-
 const app = express();
+const PORT = 5000;
 
 app.use(cors());
 
@@ -38,7 +38,5 @@ app.get('/customers', (req, res) => {
     }
   ]);
 });
-
-const PORT = 5000;
 
 app.listen(PORT, () => console.log(`Connected to Port# ${PORT}`))
