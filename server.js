@@ -7,7 +7,7 @@ app.use(cors());
 
 app.get('/customers', (req, res) => {
   console.log('Customers');
-  res.send(customers = [
+  res.send(
     {
       firstName: "Ronald",
       lastName: "Recto",
@@ -36,7 +36,7 @@ app.get('/customers', (req, res) => {
       email: "mdrecto@recto.com",
       status: "active"
     }
-  ]);
+  );
 });
 
 app.listen(PORT, () => console.log(`Connected to Port# ${PORT}`))
