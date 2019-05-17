@@ -24,7 +24,7 @@ class App extends Component {
           firstName: "Phil",
           lastName: "Recto",
           userName: "prexwebs",
-          email: "prexswebs@gmail.com",
+          email: "prexwebs@gmail.com",
           status: "disabled"
         },
         {
