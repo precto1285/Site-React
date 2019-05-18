@@ -6,7 +6,6 @@ const PORT = 5000;
 app.use(cors());
 
 app.get('/customers', (req, res) => {
-  console.log('Customers');
   res.send(
     customers = [
       {
