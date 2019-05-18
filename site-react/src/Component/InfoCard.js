@@ -19,7 +19,7 @@ const InfoCard = (props) => {
             <div className="card-header">
               <h4>Name: {props.firstName} {props.lastName}</h4>
             </div>
-            <div className="card-body">
+            <div className="card-body text-left">
               <p>Username: {props.userName}</p>
               <p>email: {props.email}</p>
             </div>

@@ -27,7 +27,7 @@ class App extends Component {
         <div className="row">
           {
             this.state.customers.map((customer) => {
-              return <div className="col-sm-3">
+              return <div id="customerCard" className="col-sm-3">
                 <InfoCard
                   key={customer.key}
                   firstName={customer.firstName}

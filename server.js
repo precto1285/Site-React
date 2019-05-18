@@ -30,7 +30,7 @@ app.get('/customers', (req, res) => {
         firstName: "Phil",
         lastName: "Recto",
         userName: "prexwebs",
-        email: "prexswebs@gmail.com",
+        email: "precto@gmail.com",
         status: "disabled"
       },
       {
@@ -45,4 +45,4 @@ app.get('/customers', (req, res) => {
   );
 });
 
-app.listen(PORT, () => console.log(`Connected to Port# ${PORT}`))
+app.listen(PORT, () => console.log(`Connected to Port# ${PORT}`));
