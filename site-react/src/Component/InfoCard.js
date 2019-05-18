@@ -12,6 +12,7 @@ const InfoCard = (props) => {
   }
   return (
     <div className="my-1 p-2 shadow-lg bg-transparent">
+      <button onClick={showCardHandler} className="btn btn-danger text-white font-weight-bolder">See More</button>
       {
         showCard.show ?
 
@@ -28,7 +29,7 @@ const InfoCard = (props) => {
             </div>
           </div> : null
       }
-      <button onClick={showCardHandler} className="btn btn-danger text-white font-weight-bolder">See More</button>
+
     </div>
   )
 }
