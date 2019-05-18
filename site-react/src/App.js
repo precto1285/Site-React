@@ -40,7 +40,7 @@ class App extends Component {
                   key={customer.key}
                   firstName={customer.firstName}
                   lastName={customer.lastName}
-                  userName={customer.firstName}
+                  userName={customer.userName}
                   email={customer.email}
                   status={customer.status}
                 />
@@ -73,7 +73,7 @@ class App extends Component {
                             key={customer.key}
                             firstName={customer.firstName}
                             lastName={customer.lastName}
-                            userName={customer.firstName}
+                            userName={customer.userName}
                             email={customer.email}
                             status={customer.status}
                           />
