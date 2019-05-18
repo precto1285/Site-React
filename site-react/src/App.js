@@ -9,11 +9,12 @@ class App extends Component {
     }
   }
 
-  componentDidMount(req, res) {
+  componentDidMount() {
     let url = "http://localhost:5000/customers";
     fetch(url)
       .then(res => { return res.json() })
-      .then(data => { this.setState({ customers: data }) })
+      .then(customers => { this.setState({ customers: customers }) })
+      .catch(error => console.log(error));
   }
 
   render() {
@@ -24,42 +25,22 @@ class App extends Component {
         </div>
         <div className="jumbotron py-5 text-center"><h1>Hello World!</h1></div>
         <div className="row">
-          <div className="col-sm-3">
-            <InfoCard
-              firstName={this.state.customers.firstName}
-              lastName={this.state.customers.lastName}
-              userName={this.state.customers.firstName}
-              email={this.state.customers.email}
-              status={this.state.customers.status}
-            />
-          </div>
-          <div className="col-sm-3">
-            <InfoCard
-              firstName={this.state.customers.firstName}
-              lastName={this.state.customers.lastName}
-              userName={this.state.customers.firstName}
-              email={this.state.customers.email}
-              status={this.state.customers.status}
-            />
-          </div>
-          <div className="col-sm-3">
-            <InfoCard
-              firstName={this.state.customers.firstName}
-              lastName={this.state.customers.lastName}
-              userName={this.state.customers.firstName}
-              email={this.state.customers.email}
-              status={this.state.customers.status}
-            />
-          </div>
-          <div className="col-sm-3">
-            <InfoCard
-              firstName={this.state.customers.firstName}
-              lastName={this.state.customers.lastName}
-              userName={this.state.customers.firstName}
-              email={this.state.customers.email}
-              status={this.state.customers.status}
-            />
-          </div>
+          {
+            this.state.customers.map((customer) => {
+              return <div className="col-sm-3">
+                <InfoCard
+                  key={customer.key}
+                  firstName={customer.firstName}
+                  lastName={customer.lastName}
+                  userName={customer.firstName}
+                  email={customer.email}
+                  status={customer.status}
+                />
+              </div>
+            })
+
+
+          }
         </div>
       </div>
     );
